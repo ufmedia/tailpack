@@ -87,7 +87,7 @@ npm run watch
 npm run build
 ```
 
-## Todo
+## To do
 
 This is a work in progress and will evolve as more use cases are added, however, the goal here is to keep things clean and simple for reusability across multiple, similar projects. Complex functionality required for a single project shouldn't make it into this repo in favour of this ethos.
 
