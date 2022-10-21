@@ -2,7 +2,7 @@
 
 A collection of scripts and tools for rapid front-end development including Tailwindcss which can be used optionally. 
 
-These scripts are an extension of the Wordpress Scripts package found (https://www.npmjs.com/package/@wordpress/scripts)[here].
+These scripts are an extension of the [Wordpress Scripts](https://www.npmjs.com/package/@wordpress/scripts) package.
 
 The intention is that these scripts can be used during static (serverless) development and once you migrate (if you migrate) onto a hosted platform - PHP/Wordpress, for example. As such, webpack-dev-server has been swapped out for BrowserSync which can serve the static files and also proxy the site if hosted locally on wamp/lamp/docker etc. 
 
@@ -33,7 +33,7 @@ entry: {
 
 ### Tailwindcss
 
-(https://tailwindcss.com/)[Tailwindcsss] and (https://tailwind-elements.com/)[Tailwind Elements] are included with this repo to help with rapid development, it's entirely optional and can be easily excluded from your compiled CSS and JS by removing the imports within the public/src/scss/style.scss file:
+[Tailwindcsss] (https://tailwindcss.com/) and [Tailwind Elements](https://tailwind-elements.com/) are included with this repo to help with rapid development, it's entirely optional and can be easily excluded from your compiled CSS and JS by removing the imports within the public/src/scss/style.scss file:
 
 ```
 @tailwind base;
@@ -66,20 +66,31 @@ new WatchExternalFilesPlugin({
     })
 ```
 
-## Installation
+## Usage 
+
+### Installation
 
 ```
 npm install
 ```
 
-## Development
+### Development
 
 ```
 npm run watch
 ```
 
 
-## Production
+### Production
 
 ```
 npm run build
+```
+
+## Todo
+
+This is a work in progress and will evolve as more use cases are added, however, the goal here is to keep things clean and simple for reusability across multiple, similar projects. Complex functionality required for a single project shouldn't make it into this repo in favour of this ethos.
+
+With this in mind, the following additions are being explored:
+
+- Image optimisation
