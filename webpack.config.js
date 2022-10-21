@@ -2,17 +2,19 @@ const defaultConfig = require('@wordpress/scripts/config/webpack.config.js')
 const path = require('path')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const WatchExternalFilesPlugin = require ('webpack-watch-files-plugin').default
+
 
 module.exports = {
   ...defaultConfig,
   entry: {
-    index: path.resolve(process.cwd(), 'public/src/js', 'index.js')
+    index: path.resolve(process.cwd(), 'src/', 'index.js')
   },
   output: {
-    path: path.resolve(process.cwd(), 'public/build')
+    path: path.resolve(process.cwd(), 'build')
   },
   optimization: {
-    ...defaultConfig.optimization,
+    ...defaultConfig.optimization
   },
   module: {
     ...defaultConfig.module,
@@ -20,8 +22,8 @@ module.exports = {
       ...defaultConfig.module.rules,
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        type: "asset",
-      },
+        type: 'asset'
+      }
     ]
   },
   plugins: [
@@ -29,10 +31,20 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['public'] }
+      //proxy: 'http://localhost/' //Use a proxy when using an existing local server.
+      server: { baseDir: ['public'] } //Use BrowserSync's server when not using an existing local server.
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
+    }),
+    new WatchExternalFilesPlugin({
+      files: [
+        './**/*.php',
+        './**/*.twig',
+        '!./src/**/*',
+        '!./node_modules/**/*',
+        '!./build/**/*',
+      ]
     })
   ]
 }
