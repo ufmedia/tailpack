@@ -33,7 +33,7 @@ entry: {
 
 ### Tailwindcss
 
-[Tailwindcsss] (https://tailwindcss.com/) and [Tailwind Elements](https://tailwind-elements.com/) are included with this repo to help with rapid development, it's entirely optional and can be easily excluded from your compiled CSS and JS by removing the imports within the public/src/scss/style.scss file:
+[Tailwindcsss](https://tailwindcss.com/) and [Tailwind Elements](https://tailwind-elements.com/) are included with this repo to help with rapid development, it's entirely optional and can be easily excluded from your compiled CSS and JS by removing the imports within the public/src/scss/style.scss file:
 
 ```
 @tailwind base;
