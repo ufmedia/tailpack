@@ -10,11 +10,11 @@ The intention is that these scripts can be used during static (serverless) devel
 
 ### Entry & Output
 
-By default webpack will look for the entry point pulic/src/js/index.js your sass and any additional JS can be imported into this file for complilation:
+By default webpack will look for the entry point public/src/js/index.js your sass and any additional JS can be imported here:
 
 ```
 import '../scss/style.scss'
-//import any other js files here
+//import any other js/scss files here
 
 ```
 
@@ -33,7 +33,7 @@ entry: {
 
 ### Tailwindcss
 
-[Tailwindcsss](https://tailwindcss.com/) and [Tailwind Elements](https://tailwind-elements.com/) are included with this repo to help with rapid development, it's entirely optional and can be easily excluded from your compiled CSS and JS by removing the imports within the public/src/scss/style.scss file:
+[Tailwindcsss](https://tailwindcss.com/) and [Tailwind Elements](https://tailwind-elements.com/) are included with this repo to help with rapid development, they're entirely optional and can be easily excluded from your compiled CSS and JS by removing the imports within the public/src/scss/style.scss file:
 
 ```
 @tailwind base;
@@ -43,7 +43,7 @@ entry: {
 
 ### BrowserSync
 
-Within the webpack.config.js you can toggle the comment on the following two lines accordingly - by default BrowserSync is configured to serve as it's likely you're starting a new project.
+Within the webpack.config.js you can toggle the comment on the following two lines accordingly - by default BrowserSync is configured to serve as it's likely you're starting a new project. In which case public/src/index.html serves as the root of your application. 
 
 ```
 //proxy: 'http://localhost/' //Use a proxy when using an existing local server.

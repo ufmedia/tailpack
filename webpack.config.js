@@ -8,7 +8,7 @@ const WatchExternalFilesPlugin = require ('webpack-watch-files-plugin').default
 module.exports = {
   ...defaultConfig,
   entry: {
-    index: path.resolve(process.cwd(), 'public/src/', 'index.js')
+    index: path.resolve(process.cwd(), 'public/src/js/', 'index.js')
   },
   output: {
     path: path.resolve(process.cwd(), 'public/build')
