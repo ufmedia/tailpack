@@ -39,12 +39,12 @@ entry: {
 gh repo clone ufmedia/tailpack
 ```
  
-[Download Tialpack](https://github.com/ufmedia/tailpack/archive/refs/heads/main.zip)
+[Download Tailpack](https://github.com/ufmedia/tailpack/archive/refs/heads/main.zip)
  
 ### Installation
  
 ```
-npm install
+npm install --save-dev
 ```
  
 ### Development
@@ -131,7 +131,7 @@ By default we'll listen on the webpack-dev-server port (9000). You could change 
  
 ### Watching for file changes
  
-Webpack watch by default will only watch files which are children of the entry point directory (by default this is public/src/). This is most likely fine for new static projects but if you're working on an existing application or, for example, developing a wordpress plugin or theme, you can add additional file globs to be watched. These will then trigger a reload within the browser once changed. Within the webpack.config.js:
+Webpack will only watch files which are children of the entry point directory (by default this is public/src/). This is most likely fine for new static projects but if you're working on an existing application or, for example, developing a wordpress plugin or theme, you can add additional file globs to be watched. These will then trigger a reload within the browser once changed. Within the webpack.config.js:
  
 ```
 new WatchExternalFilesPlugin({
