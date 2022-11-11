@@ -17,7 +17,6 @@
     "test:unit": "wp-scripts test-unit-js",
     "watch": "wp-scripts start watch",
     "serve": "wp-scripts start --hot"
-
   },
   "author": "John Thompson",
   "license": "ISC",
@@ -42,5 +41,8 @@
     "tailwindcss": "^3.1.8",
     "tw-elements": "^1.0.0-alpha12",
     "webpack-watch-files-plugin": "^1.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2"
   }
 }
