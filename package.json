@@ -13,10 +13,11 @@
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js",
-    "watch": "wp-scripts start watch"
+    "watch": "wp-scripts start watch",
+    "serve": "wp-scripts start --hot"
+
   },
   "author": "John Thompson",
   "license": "ISC",

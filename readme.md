@@ -43,12 +43,14 @@ entry: {
 
 ### BrowserSync
 
-Within the webpack.config.js you can toggle the comment on the following two lines accordingly - by default BrowserSync is configured to serve as it's likely you're starting a new project. In which case public/src/index.html serves as the root of your application. 
+Within the webpack.config.js you can toggle the comment on the following two lines accordingly - by default BrowserSync is configured to serve as it's likely you're starting a new project. In which case public/index.html serves as the root of your application. 
 
 ```
 //proxy: 'http://localhost/' //Use a proxy when using an existing local server.
 server: { baseDir: ['public'] } //Use BrowserSync's server when not using an existing local server.
 ```
+
+The port is currently set to 3000 so your appliation will be available on http://localhost:3000 it's worth mentioning that proxying will only work on localhost not 127.0.0.1
 
 ### Watching for file changes
 
@@ -58,7 +60,7 @@ Webpack watch by default will only watch files which are children of the entry p
 new WatchExternalFilesPlugin({
       files: [
         './**/*.php',
-        './**/*.twig',
+        './**/*.twig', 
         '!./src/**/*',
         '!./node_modules/**/*',
         '!./build/**/*',
