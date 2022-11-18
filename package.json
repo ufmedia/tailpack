@@ -15,8 +15,8 @@
     "plugin-zip": "wp-scripts plugin-zip",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js",
-    "watch": "wp-scripts start watch",
-    "serve": "wp-scripts start --hot"
+    "watch": "wp-scripts start watch --env devType=hosted",
+    "serve": "wp-scripts start --hot --env devType=static"
   },
   "author": "John Thompson",
   "license": "ISC",
